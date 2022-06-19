@@ -19,7 +19,16 @@ const Menu = () => {
           </a>
           <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
             <li>
-                <NavLink className="dropdown-item" to="">Calculadora de porcentagem</NavLink>
+                <NavLink className="dropdown-item" to="/CSR"> Configuração de Serviços de Rede </NavLink>
+            </li>
+            <li>
+                <NavLink className="dropdown-item" to="/ERT"> Escrita de Relatórios Técnicos </NavLink>
+            </li>
+            <li>
+                <NavLink className="dropdown-item" to="/LPBD"> Linguagem de Programação com Banco de Dados </NavLink>
+            </li>
+            <li>
+                <NavLink className="dropdown-item" to="/PPO"> Prática Profissional Orientada </NavLink>
             </li>
           </ul>
         </li>
