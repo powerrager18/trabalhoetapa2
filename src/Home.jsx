@@ -1,6 +1,6 @@
 const Home = () => (
     <div>
-        <h1>Atividade sobre rotas</h1>
+        <h1>1 Trabalho da etapa 2</h1>
     </div>
 );
 
