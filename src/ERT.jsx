@@ -2,47 +2,62 @@ import { useState } from "react";
 
 function ERT() {
 
-    const [valor1, setValor1] = useState(0);
-    const [valor2, setValor2] = useState(0);
+    const [nota1, setNota1] = useState(0);
+    const [nota2, setNota2] = useState(0);
+    const [nota3, setNota3] = useState(0);
+    const [nota4, setNota4] = useState(0);
+    const [nota5, setNota5] = useState(0);
     const [resultado, setResultado] = useState(0);
 
     return (
         <div style={{ padding: '20px' }}>
-            <h1>Calculo de notas</h1>
+            <h1>Calculo de notas ERT</h1>
             <div className="mb-3">
-                <label htmlFor="txtValor1" className="form-label">Valor 1</label>
+                <label htmlFor="txtNota1" className="form-label">nota 1</label>
                 <input type="number" className="form-control"
-                    id="txtValor1" placeholder="Valor 1 - Obrigatório"
-                    value={valor1}
-                    onChange={e => setValor1(e.target.value)} />
+                    id="txtNota1" placeholder="nota 1 - Obrigatório"
+                    value={nota1}
+                    onChange={e => setNota1(e.target.value)} />
             </div>
             <div className="mb-3">
-                <label htmlFor="txtValor2" className="form-label">Valor 2</label>
+                <label htmlFor="txtNota2" className="form-label">nota 2</label>
                 <input type="number" className="form-control"
-                    id="txtValor2" placeholder="Valor 2 - Obrigatório"
-                    value={valor2}
-                    onChange={e => setValor2(e.target.value)} />
+                    id="txtNota2" placeholder="nota 2 - Obrigatório"
+                    value={nota2}
+                    onChange={e => setNota2(e.target.value)} />
             </div>
-    
+            <div className="mb-3">
+                <label htmlFor="txtNota3" className="form-label">nota 3</label>
+                <input type="number" className="form-control"
+                    id="txtNota3" placeholder="nota 3 - Obrigatório"
+                    value={nota3}
+                    onChange={e => setNota3(e.target.value)} />
+            </div>
+            <div className="mb-3">
+                <label htmlFor="txtNota4" className="form-label">nota 4</label>
+                <input type="number" className="form-control"
+                    id="txtNota4" placeholder="nota 4 - Obrigatório"
+                    value={nota4}
+                    onChange={e => setNota4(e.target.value)} />
+            </div>
+            <div className="mb-3">
+                <label htmlFor="txtNota5" className="form-label">nota 5</label>
+                <input type="number" className="form-control"
+                    id="txtNota5" placeholder="nota 5 - Obrigatório"
+                    value={nota5}
+                    onChange={e => setNota5(e.target.value)} />
+            </div>
+
             <button type="button" className="btn btn-outline-primary col-2"
                 onClick={
-                    () => setResultado(Number(valor1) + Number(valor2))
-                }>+</button>
-            <button type="button" className="btn btn-outline-success col-2"
-                onClick={
-                    () => setResultado(Number(valor1) - Number(valor2))
-                }>-</button>
-            <button type="button" className="btn btn-outline-warning col-2"
-                onClick={
-                    () => setResultado(Number(valor1) * Number(valor2))
-                }>x</button>
-            <button type="button" className="btn btn-outline-info col-2"
-                onClick={
-                    () => setResultado(Number(valor1) / Number(valor2))
-                }>/</button>
+                    () => setResultado( ((Number(nota1) * 2)/20) + ((Number(nota2) * 4)/20) + ((Number(nota3) * 4)/20) + ((Number(nota4) * 4)/20) + ((Number(nota5) * 6)/20))
+                }>Calcular nota total</button>
 
-            <h1>Valor 1: {valor1}</h1>
-            <h1>Valor 2: {valor2}</h1>
+            <h1>nota 1: {nota1}</h1>
+            <h1>nota 2: {nota2}</h1>
+            <h1>nota 3: {nota3}</h1>
+            <h1>nota 4: {nota4}</h1>
+            <h1>nota 5: {nota5}</h1>
             <h1>Resultado: {resultado}</h1>
         </div>
     );
